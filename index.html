@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country House - där tiden stannar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">countryhouse.se</a>
+            <ul class="nav-links">
+                <li><a href="#om-oss">Om Oss</a></li>
+                <li><a href="#rum">Rum & Upplevelse</a></li>
+                <li><a href="#kulinarisk">Kulinarisk resa</a></li>
+                <li><a href="#bokning">Bokning</a></li>
+                <li><a href="#kunddomme">Kundomdömen</a></li>
+                <li><a href="#kontakt">Kontakta oss</a></li>
+                <li><a href="#hitta">Hitta oss</a></li>
+            
+            </ul>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#om-oss" onclick="closeMobileMenu()">Om Oss</a></li>
+            <li><a href="#rum" onclick="closeMobileMenu()">Rum & Upplevelse</a></li>
+            <li><a href="#kulinarisk" onclick="closeMobileMenu()">Kulinarisk resa</a></li>
+            <li><a href="#bokning" onclick="closeMobileMenu()">Bokning</a></li>
+            <li><a href="#kunddomme" onclick="closeMobileMenu()">Kundomdömen</a></li>
+            <li><a href="#kontakt" onclick="closeMobileMenu()">Kontakta oss</a></li>
+            <li><a href="#hitta" onclick="closeMobileMenu()">Hitta oss</a></li>
+    
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Country House - där tiden stannar</h1>
+            <p>Country House är ett familjeägt country house beläget i hjärtat av Dalarna. Här kombineras klassisk elegans med modern komfort. Varje rum är unikt inrett, inspirerat av naturen och den omgivande miljön.</p>
+            <p class="tagline">Country House är mer en boende, är en känsla!</p>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="container">
+        <div class="gallery">
+            <img src="images/entre.webp" alt="Country House exterior with pond">
+            <img src="images/receptie.webp" alt="Elegant interior lobby">
+            <img src="images/hotel4.webp" alt="Outdoor pavilion area">
+            <img src="images/frukost.webp" alt="Frukost area">
+            <img src="images/spa1.webp" alt="Spa area">
+            <img src="images/hotel3.webp" alt="Relax area">
+        </div>
+    </section>
+
+    <!-- Rum Section  -->
+    <section class="rum-section" id="rum">
+        <div class="container">
+            <h2>Nordisk Design & Total Avkoppling</h2>
+            <p>Upplev vårt unika hotellrum med en perfekt blandning av modern lyx och vikingainspirerad charm. </p>
+            <div class="rum-gallery">
+                <img src="images/rum1.webp" alt="Superior rum">
+                <img src="images/bath1.webp" alt="Bath superior rum">
+                <img src="images/rum2.webp" alt="Viking rum ">
+                <img src="images/bath2.webp" alt="Viking rum bath">
+                <img src="images/rum3.webp" alt="Rum simple">
+                <img src="images/bath3.webp" alt="Rum simple bath">
+                                           
+                              
+            </div>
+        </div>
+    </section>
+
+       
+    <!-- Viking Experience Section -->
+    <section class="viking-section" id="kulinarisk">
+        <div class="container">
+            <h2>En Kulinarisk Resa i Vikingens Fotspår</h2>
+            <p>Maten hos oss är en upplevelse i sig. Börja dagen med vår rikliga vikingafrukostbuffé, där fokus ligger på naturliga råvaror direkt från egna gårdar. Tänk dig fält dignande av rökt kött, hantvverksostar, nybakat mörkt bröd, vilda bär, nötter och gyllene honung. Det är en fest för sinnena som ger dig energi för dagens äventyr, precis som vikingarna skulle ha njutit!</p>
+            
+            <div class="viking-gallery">
+                <img src="images/dinner1.webp" alt="Viking dining hall">
+                <img src="images/dans.webp" alt="Traditional feast">
+                <img src="images/menu1.webp" alt="Viking menu">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="bokning">
+        <div class="container">
+            <h2>Kontakt & bokning</h2>
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Namn och Förnamn</label>
+                        <input type="text" placeholder="Skriv ditt namn och förnamn" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email adress</label>
+                        <input type="email" placeholder="din@email.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Telefon nummer</label>
+                        <input type="tel" placeholder="Skriv ditt telefon nummer med prefix">
+                    </div>
+                    <div class="form-group">
+                        <label>Antal gäster</label>
+                        <select required>
+                            <option value="">Välj antal gäster</option>
+                            <option value="1">1 gäst</option>
+                            <option value="2">2 gäster</option>
+                            <option value="3">3 gäster</option>
+                            <option value="4">4 gäster</option>
+                            <option value="5">5 gäster</option>
+                            <option value="6+">6+ gäster</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Incheckning</label>
+                        <input type="date" id="checkin" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Utcheckning</label>
+                        <input type="date" id="checkout" required>
+                    </div>
+                </div>
+
+
+                
+
+                <div class="form-group">
+                    <label>Antal rum</label>
+                    <div class="room-selection">
+                        <label class="room-option">
+                            <input type="radio" name="rooms" value="1" required>
+                            <span class="room-card">
+                                <strong>1 rum</strong>
+                                <span class="room-price">från 1,200 kr/natt</span>
+                            </span>
+                        </label>
+                        <label class="room-option">
+                            <input type="radio" name="rooms" value="2">
+                            <span class="room-card">
+                                <strong>2 rum</strong>
+                                <span class="room-price">från 2,200 kr/natt</span>
+                            </span>
+                        </label>
+                        <label class="room-option">
+                            <input type="radio" name="rooms" value="3">
+                            <span class="room-card">
+                                <strong>3 rum</strong>
+                                <span class="room-price">från 3,000 kr/natt</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Rumtyp</label>
+                    <select>
+                        <option value="">Välj rumtyp (valfritt)</option>
+                        <option value="standard">Standard rum</option>
+                        <option value="deluxe">Deluxe rum</option>
+                        <option value="suite">Suite med balkong</option>
+                        <option value="viking">Viking-tema rum</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tilläggstjänster</label>
+                    <div class="services-selection">
+                        <label class="service-checkbox">
+                            <input type="checkbox" value="spa">
+                            <span>Spa-behandling (+500 kr)</span>
+                        </label>
+                        <label class="service-checkbox">
+                            <input type="checkbox" value="viking-dinner">
+                            <span>Vikingamiddag (+350 kr/person)</span>
+                        </label>
+                        <label class="service-checkbox">
+                            <input type="checkbox" value="breakfast">
+                            <span>Frukost inkluderad (+150 kr/person)</span>
+                        </label>
+                        <label class="service-checkbox">
+                            <input type="checkbox" value="transfer">
+                            <span>Transfer från flygplats (+400 kr)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                
+   
+                
+
+                <div class="form-group">
+                    <label>Meddelande / Särskilda önskemål</label>
+                    <textarea rows="4" placeholder="Skriv eventuella särskilda önskemål här..."></textarea>
+                </div>
+
+                <div class="price-summary">
+                    <h3>Prisuppskattning</h3>
+                    <div class="price-details" id="priceDetails">
+                        <p>Välj datum och antal rum för att se pris</p>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary">Skicka bokningsförfrågan</button>
+                    <button type="reset" class="btn btn-secondary">Rensa formulär</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="kunddomme">
+        <div class="container">
+            <h2>Gästomdömen</h2>
+            <div class="carousel-container">
+                <button class="carousel-arrows prev" onclick="previousSlide()">‹</button>
+                <button class="carousel-arrows next" onclick="nextSlide()">›</button>
+                
+                <div class="carousel" id="carousel">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Oförglömligt! Vikingagastillen och maten var enastående. Återkommer gärna!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">FS</div>
+                            <div class="author-info">
+                                <h4>Fam. Svensson</h4>
+                                <p>Stockholm</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Vilken pärla! Fantastisk charm, superb frukost och underbar personal. Rekommenderas!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">HH</div>
+                            <div class="author-info">
+                                <h4>Henrike H.</h4>
+                                <p>Göteborg</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Unikt och avkopplande! Älskade designen och trädgården. En upplevelse utöver det vanliga!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">EM</div>
+                            <div class="author-info">
+                                <h4>Erik och Maya</h4>
+                                <p>Malmö</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Magisk atmosfär och otrolig service. Perfekt för en romantisk helg. Vi kommer definitivt tillbaka!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AL</div>
+                            <div class="author-info">
+                                <h4>Anna & Lars</h4>
+                                <p>Uppsala</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Fantastisk vikingaupplevelse! Barnen var helt förtjusta och vi vuxna också. Tack för minnena!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">KF</div>
+                            <div class="author-info">
+                                <h4>Karlsson Family</h4>
+                                <p>Linköping</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-nav">
+                    <span class="nav-dot active" onclick="currentSlide(1)"></span>
+                    <span class="nav-dot" onclick="currentSlide(2)"></span>
+                    <span class="nav-dot" onclick="currentSlide(3)"></span>
+                    <span class="nav-dot" onclick="currentSlide(4)"></span>
+                    <span class="nav-dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+     <!-- KONTAKT -->
+    <section class="kontakt-section" id="kontakt">
+        <div class="container">
+            <h2>Kontakta oss</h2>
+            <p>Har du frågor eller vill boka din vistelse? Tveka inte att höra av dig!</p>
+            <p>Telefon: 0123-456 789<br>E-post:info@countryhouse.se</p>
+    </section>
+    
+    <!-- Hitta -->
+    <section class ="hitta-section" id="hitta">
+        <div class="container"></div>
+            <h2>Hitta oss</h2>
+         
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1089.5736946180347!2d13.167308458496094!3d61.15663898883057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x466734c8b8f7b1a1%3A0x4034506de8c8620!2sS%C3%A4len%2C%20Sverige!5e0!3m2!1ssv!2sse!4v1691234567890"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+     </section>
+   
+
+
+
+    
+
+    
+
+
+    <footer>
+        <p>Följ oss: 
+      <a href="https://instagram.com" target="_blank">Instagram</a> | 
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+    </p>
+    <p>&copy; Telefon: 0123-456 789</p>
+    <p>&copy; Adressen: Barkavägen 5A, Dalarna</p>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
